@@ -1,0 +1,29 @@
+{
+  "projects": {
+    "default": "frontier-sfs",
+    "production": "frontier-sfs",
+    "development": "dev-frontier-sfs"
+  },
+  "targets": {
+    "frontier-sfs": {
+      "hosting": {
+        "public": [
+          "frontier-sfs"
+        ],
+        "admin": [
+          "admin-frontier-sfs"
+        ]
+      }
+    },
+    "dev-frontier-sfs": {
+      "hosting": {
+        "admin": [
+          "admin-dev-frontier-sfs"
+        ],
+        "public": [
+          "dev-frontier-sfs"
+        ]
+      }
+    }
+  }
+}
