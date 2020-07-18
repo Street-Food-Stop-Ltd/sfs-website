@@ -20,8 +20,5 @@ jobs:
         with:
           node-version: "10"
       - run: npm i -g firebase-tools
-      - run: cd ./functions
-      - run: npm install
-      - run: npm build
-      - run: cd ..
+      - run: cd ./functions && npm install
       - run: firebase deploy --token $FIREBASE_TOKEN -P development
