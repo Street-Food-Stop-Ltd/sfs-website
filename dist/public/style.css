@@ -48,6 +48,16 @@ section {
   min-height: 100vh;
 }
 
+.home-page,
+.menu-page,
+.order-page,
+.locate-page,
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Navigation bar and Logo */
 .main-header {
   position: absolute;
@@ -121,13 +131,9 @@ img.logo {
   height: 15rem;
 }
 
-/* Welcome page styling */
-
+/*Home page*/
 .home-page {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: linear-gradient(transparent, #f6a217),
     url(./images/5-MEER4273.jpg);
@@ -170,141 +176,95 @@ img.logo {
   color: #dc2c39;
   font-size: 7.5rem;
   text-align: center;
-  width: 100%;
+  width: 95%;
   border-bottom: #dc2c39 solid 2px;
   text-shadow: 3px 3px#b67813;
 }
 
 .menu-viewer {
   width: 90%;
-  display: grid;
-  grid-template-columns: 0.5fr 0.5fr 1fr;
-  /* border-top: #dc2c39 solid 2px; */
-  padding-top: 5rem;
-  /* padding: 10px; */
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 0;
+}
+
+.menu-nav {
+  border-right: #dc2c39 solid 2px;
+}
+
+.menu-viewer > div,
+.menu-viewer > nav {
+  padding: 1.5rem;
 }
 
 .menu-nav .nav-items {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-width: 18rem;
 }
 
 .menu-nav .nav-item {
   height: 4rem;
 }
 
-.nav-items button {
-  font-family: antarctican-mono, sans-serif;
-  font-size: 2rem;
+.description-section {
+  font-size: 2.5rem;
+  flex: 1 1 25rem;
+  margin-right: auto;
 }
 
-.menu-items-grid {
+.image-slideshow-section {
+  flex: 2 1 50rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 275px);
-  /* justify-content: center; */
+  grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  justify-content: center;
 }
 
-.menu-view {
-  display: flex;
-  flex-direction: column;
+.slideshow-button {
+  color: #dc2c39;
+  font-size: 10rem;
+  transition: all 250ms ease-in-out;
 }
 
-/* .menu-section-description {
-  margin: 0 1rem;
-  font-size: 2.5rem;
-  /* margin: auto; */
-/* grid-column: 1 / end; */
-
-.menu-item {
-  position: relative;
-  margin: 1rem;
-  height: 300px;
-  overflow: hidden;
-  /* border: #dc2c39 solid 1px; */
-  background: url(./images/10-MEER4281.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* .menu-item:hover {
-  background: linear-gradient(to top, rgba(220, 44, 57, 0.75), transparent),
-    url(./images/10-MEER4281.jpg);
-} */
-
-.menu-item-description {
+.slideshow-button:hover {
   background-color: #dc2c39;
-  position: absolute;
-  padding: 1rem;
-  bottom: 0px;
-  height: 70%;
+  color: #f6a217;
+}
+
+.slideshow img {
+  display: block;
   width: 100%;
-  transform: translateY(100%);
-  font-size: 1.5rem;
-  transition: all 250ms ease-in-out, text-shadow 250ms 200ms ease-in-out;
+  object-fit: cover;
+  object-position: center;
 }
-
-.menu-item:hover .menu-item-description {
-  transform: translateY(0px);
-  text-shadow: 3px 3px #9d1e29;
-}
-
-.menu-item-description button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-  height: 45px;
-  padding: 0.5rem;
-  margin: 1rem;
-  transition: all 200ms ease-in-out;
-}
-
-.menu-item-description button:hover {
-  text-shadow: 2px 2px#b67813;
-}
-
-.menu-item-description .item-price {
-  position: absolute;
-  font-weight: 700;
-  font-size: 2.5rem;
-  left: 0;
-  bottom: 0;
-  /* padding: 0.5rem; */
-  margin: 1rem;
-}
-/* Offers section */
+/* Order section */
 
 /* Locate section */
 .locate-page {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-}
-
-.holder {
-  padding: 5rem;
-  background-color: #dc2c39;
+  align-items: center;
 }
 
 .locate-page .holder {
-  width: 85%;
+  width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 550px);
-  margin: auto auto;
+  margin: auto 0;
   justify-content: center;
-  align-self: center;
   column-gap: 5rem;
 }
 
 .holder iframe {
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
+  padding: 2rem;
+  background-color: #dc2c39;
 }
 
 .opening-times .list-title {
-  text-shadow: #9d1e29 2px 2px;
+  text-shadow: #b67813 2px 2px;
 }
 
 .opening-times {
@@ -315,20 +275,27 @@ img.logo {
 }
 
 .opening-times h1 {
-  color: #f6a217;
-  font-size: 4rem;
-  border-bottom: #f6a217 2px solid;
+  color: #dc2c39;
+  font-size: 6rem;
+  border-bottom: #dc2c39 2px solid;
   margin-bottom: 1rem;
 }
 
 .opening-time {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 /* Contact section */
 
 .contact-page {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.contact-methods-holder {
+  background-color: #dc2c39;
+  width: 90%;
+  margin: auto;
+}
 /* Footer */
