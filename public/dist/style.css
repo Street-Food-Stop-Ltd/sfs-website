@@ -20,7 +20,7 @@ html::-webkit-scrollbar {
 
 body {
   font-family: antarctican-mono, sans-serif;
-  color: white;
+  color: #232527;
   background-color: #f6a217;
   position: relative;
 }
@@ -32,6 +32,10 @@ li {
 a {
   color: #dc2c39;
   text-decoration: none;
+}
+
+i {
+  font-size: 4rem;
 }
 
 button {
@@ -120,10 +124,10 @@ section {
 }
 
 .nav-items .nav-button:hover a {
-  text-shadow: 2px 2px #b67813;
+  text-shadow: 2px 2px 5px #b67813;
 }
 .nav-items .nav-button.active a {
-  text-shadow: 2px 2px #b67813;
+  text-shadow: 2px 2px 5px #b67813;
 }
 
 img.logo {
@@ -147,10 +151,15 @@ img.logo {
   font-size: 7.5rem;
 }
 
+.typed-cursor {
+  color: #dc2c39;
+  display: none;
+}
+
 .home-page strong {
   color: #dc2c39;
   font-size: 15rem;
-  text-shadow: 5px 5px rgba(182, 120, 19, 0.5);
+  text-shadow: 5px 5px 8px rgba(182, 120, 19, 0.5);
 }
 
 .home-page p {
@@ -161,8 +170,9 @@ img.logo {
 }
 
 .home-page p strong {
+  color: white;
   font-size: 8rem;
-  text-shadow: 5px 5px rgba(182, 120, 19, 0.8);
+  text-shadow: 5px 5px 8px rgba(182, 120, 19, 0.8);
 }
 
 /* Menu section */
@@ -178,7 +188,14 @@ img.logo {
   text-align: center;
   width: 95%;
   border-bottom: #dc2c39 solid 2px;
-  text-shadow: 3px 3px#b67813;
+  text-shadow: 3px 3px 5px#b67813;
+}
+
+.section-slogan {
+  font-size: 3rem;
+  width: 90%;
+  text-align: center;
+  margin: auto;
 }
 
 .menu-viewer {
@@ -219,10 +236,12 @@ img.logo {
   display: grid;
   grid-template-columns: 0.1fr 0.8fr 0.1fr;
   justify-content: center;
+  background-color: #232527;
 }
 
 .slideshow-button {
   color: #dc2c39;
+  background-color: transparent;
   font-size: 10rem;
   transition: all 250ms ease-in-out;
 }
@@ -251,8 +270,8 @@ img.logo {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fill, 550px);
-  margin: auto 0;
   justify-content: center;
+  margin-bottom: auto;
   column-gap: 5rem;
 }
 
@@ -260,11 +279,11 @@ img.logo {
   width: 550px;
   height: 550px;
   padding: 2rem;
-  background-color: #dc2c39;
+  background-color: #232527;
 }
 
 .opening-times .list-title {
-  text-shadow: #b67813 2px 2px;
+  text-shadow: #b67813 3px 3px 5px;
 }
 
 .opening-times {
@@ -274,7 +293,7 @@ img.logo {
   align-items: center;
 }
 
-.opening-times h1 {
+.opening-times h2 {
   color: #dc2c39;
   font-size: 6rem;
   border-bottom: #dc2c39 2px solid;
@@ -285,6 +304,10 @@ img.logo {
   text-align: center;
   font-size: 3.5rem;
 }
+
+.opening-times-list {
+  text-align: start;
+}
 /* Contact section */
 
 .contact-page {
@@ -294,8 +317,124 @@ img.logo {
 }
 
 .contact-methods-holder {
-  background-color: #dc2c39;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, 30%);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 90%;
-  margin: auto;
+  margin-bottom: auto;
 }
+
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #232527;
+  flex: 1 1 30rem;
+  height: 550px;
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.contact-method > i {
+  margin: 5rem 5rem 0rem;
+  font-size: 8rem;
+}
+
+.contact-method-title {
+  margin-top: auto;
+  font-size: 4rem;
+}
+
+.contact-method-descriptor {
+  width: 75%;
+  font-size: 1.3rem;
+  margin: 2rem;
+}
+
+#phone-number {
+  display: block;
+  padding: 1rem;
+  color: white;
+  border: #f6a217 solid 2px;
+  font-size: 4rem;
+  margin-bottom: auto;
+}
+.or {
+  font-size: 5rem;
+}
+
+.social-media-button i {
+  color: white;
+  padding: 1rem;
+}
+
+.social-media-button {
+  width: 80%;
+  margin-bottom: auto;
+}
+
+#instagram {
+  background-color: #d10471;
+}
+
+#facebook {
+  background-color: #1a78f2;
+}
+
+#twitter {
+  background-color: #1da1f2;
+}
+
+/* Form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: auto;
+  width: 80%;
+}
+
+.contact-form .form-section,
+.form-section input,
+.form-section textarea {
+  width: 100%;
+}
+
+.contact-form input {
+  font-size: 1rem;
+  padding: 1rem 3rem;
+}
+
+.contact-form textarea {
+  font-size: 1rem;
+  min-height: 10vh;
+  padding: 0.5rem;
+}
+
+.contact-form label {
+  font-size: 1.5rem;
+}
+
+.form-section label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form button {
+  padding: 1rem 3rem;
+}
+
+.form-email,
+.form-name {
+  margin-bottom: 1.5rem;
+}
+
 /* Footer */
+
+#input {
+  font: 5rem;
+}

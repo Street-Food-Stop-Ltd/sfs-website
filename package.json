@@ -1,0 +1,33 @@
+{
+  "name": "sfs-website",
+  "version": "1.0.0",
+  "description": "The Street Food Stop webiste.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Street-Food-Stop-Ltd/sfs-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Street-Food-Stop-Ltd/sfs-website/issues"
+  },
+  "homepage": "https://github.com/Street-Food-Stop-Ltd/sfs-website#readme",
+  "devDependencies": {
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "live-server": "^1.2.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.11"
+  }
+}
