@@ -368,7 +368,6 @@ img.logo {
 }
 
 .social-media-button i {
-  color: white;
   padding: 1rem;
 }
 
@@ -378,15 +377,27 @@ img.logo {
 }
 
 #instagram {
-  background-color: #d10471;
+  border: #d10471 solid 2px;
+}
+
+#instagram i {
+  color: #d10471;
+}
+
+#facebook i {
+  color: #1a78f2;
 }
 
 #facebook {
-  background-color: #1a78f2;
+  border: #1a78f2 solid 2px;
+}
+
+#twitter i {
+  color: #1da1f2;
 }
 
 #twitter {
-  background-color: #1da1f2;
+  border: #1da1f2 solid 2px;
 }
 
 /* Form styling */
@@ -405,8 +416,8 @@ img.logo {
 }
 
 .contact-form input {
-  font-size: 1rem;
-  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
 }
 
 .contact-form textarea {
