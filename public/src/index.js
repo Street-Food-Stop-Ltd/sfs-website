@@ -1,5 +1,3 @@
-console.log("hello");
-
 import TypeIt from "typeit";
 
 // Type animation.
